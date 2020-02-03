@@ -1,0 +1,48 @@
+			CLASS PROGRAMAÇÃO
+
+import javax.swing.JOptionPane;
+
+
+public class ClassVerifica {
+	public void Processar(){
+	try{
+		int x=Integer.parseInt(Verificar.T1.getText());
+		if(x%2==0){JOptionPane.showMessageDialog(null, "O número "+x+" é PAR",
+				"** Número Par **",
+				JOptionPane.INFORMATION_MESSAGE);}
+		else{
+			JOptionPane.showMessageDialog(null, "O número "+x+" é ÍMPAR",
+					"** Número Impar **",
+					JOptionPane.INFORMATION_MESSAGE);	}
+	}
+	catch(Exception ex){
+		JOptionPane.showMessageDialog(null, "Digite somente números\n\nTenteNovamente!!!",
+				"** Erro de Processamente **",
+				JOptionPane.ERROR_MESSAGE);
+	}
+
+}
+		public void Limpar()
+		{
+			Verificar.T1.setText(null);
+			Verificar.T1.requestFocus();
+		}
+		
+		public void Saída(){
+		int r=JOptionPane.showConfirmDialog(null, "Deseja sair da Aplicação?",
+				"** Finalizando **",
+				JOptionPane.YES_NO_OPTION,
+				JOptionPane.QUESTION_MESSAGE);
+		if(r==0)
+		{
+			System.exit(0);
+		}
+		else
+		{
+			this.Limpar();
+		}
+		}
+		
+		
+		
+}
